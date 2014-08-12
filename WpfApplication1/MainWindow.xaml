@@ -8,7 +8,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="60" />
                 <RowDefinition Height="*" />
-                <RowDefinition Height="60" />
+                <RowDefinition Height="80" />
             </Grid.RowDefinitions>
             <StackPanel Grid.Row="0">
                 <TextBlock TextWrapping="WrapWithOverflow">
@@ -18,8 +18,11 @@
                 </TextBlock>
             </StackPanel>
             <Grid Name="gridBrowser" Grid.Row="1"/>
-            <Button Name="Export" Click="Button_Click_1" Height="60" HorizontalAlignment="Stretch" Content="EXPORT" Grid.Row="2"
+            <StackPanel Grid.Row="2">
+                <TextBox Name="txtOutput" Height="20" Text="D:\output.csv"/>
+                <Button Name="Export" Click="Button_Click_1" Height="60" HorizontalAlignment="Stretch" Content="EXPORT" 
                     FontSize="18" FontWeight="Bold" Background="GreenYellow"/>
+            </StackPanel>
         </Grid>
     </Grid>
 </Window>

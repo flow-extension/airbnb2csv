@@ -27,8 +27,6 @@ namespace WpfApplication1
     /// </summary>
     public partial class MainWindow : Window
     {
-        const string OUTPUT_FILE = @"D:\output.csv";
-
         private WebView _webView;
         private ManualResetEvent _manualResetEvent = new ManualResetEvent(false);
         private List<AirBNBRecord> _records = new List<AirBNBRecord>();
@@ -96,7 +94,7 @@ namespace WpfApplication1
 
         private void ExportToCSV()
         {
-            StreamWriter writer = new StreamWriter(OUTPUT_FILE);
+            StreamWriter writer = new StreamWriter(txtOutput.Text);
             var csvWriter = new CsvWriter(writer);
             csvWriter.Configuration.Encoding = Encoding.UTF8;
 
